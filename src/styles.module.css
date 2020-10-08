@@ -1,9 +1,33 @@
 /* add css module styles here (optional) */
 
-.test {
+/* .test {
   margin: 2em;
   padding: 0.5em;
   border: 2px solid #000;
   font-size: 2em;
   text-align: center;
+} */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.ham {
+  position: absolute;
+  width: 75%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: white;
+}
+
+@media only screen and (min-width: 600px) {
+  .ham {
+    position: absolute;
+    width: 20%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: white;
+  }
 }

@@ -1,10 +1,15 @@
 import React from 'react'
+import menu from './sort-descending.svg'
 
-import { ExampleComponent } from 'library'
+import { SideBar } from 'library'
 import 'library/dist/index.css'
 
 const App = () => {
-  return <ExampleComponent text="Create React Library Example 😄" />
+  return (
+    <SideBar ham={menu}>
+      <p>Hello</p>
+    </SideBar>
+  )
 }
 
 export default App
