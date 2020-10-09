@@ -1,6 +1,6 @@
 {
   "name": "react-burger-sidenav",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Made with create-react-library",
   "author": "Samamoah",
   "license": "MIT",
@@ -11,6 +11,16 @@
   "engines": {
     "node": ">=10"
   },
+  "keywords": [
+    "react",
+    "react-component",
+    "react-burger",
+    "react-sidenav",
+    "sidenav",
+    "burger",
+    "component",
+    "menu"
+  ],
   "scripts": {
     "build": "microbundle-crl --no-compress --format modern,cjs",
     "start": "microbundle-crl watch --no-compress --format modern,cjs",
