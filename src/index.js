@@ -13,7 +13,8 @@ export const SideBarItem = ({
   bgHover = '#f7fafc',
   bgColor = 'white',
   padding = '1rem',
-  target = ''
+  target = '',
+  className = ''
 }) => {
   var [hover, setHover] = useState(false)
   return (
@@ -22,6 +23,7 @@ export const SideBarItem = ({
       onMouseOver={() => {
         setHover(!hover)
       }}
+      className={className}
       target={target}
       style={{
         color: 'black',
@@ -42,7 +44,8 @@ export const SideBar = ({
   ham,
   iconColor = '#00000',
   closeColor = '#00000',
-  backgroundColor = 'white'
+  backgroundColor = 'white',
+  className = ''
 }) => {
   var [isOpen, setIsOpen] = useState(false)
   return (
@@ -88,7 +91,7 @@ export const SideBar = ({
       </a>
       {isOpen && (
         <div
-          className={`${styles.ham} animate__animated animate__slideInLeft`}
+          className={`${styles.ham} ${className} animate__animated animate__slideInLeft`}
           style={{
             backgroundColor: `${backgroundColor}`
           }}

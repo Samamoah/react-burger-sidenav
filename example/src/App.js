@@ -1,8 +1,8 @@
 import React from 'react'
 import menu from './sort-descending.svg'
 
-import { SideBar, SideBarItem } from 'library'
-import 'library/dist/index.css'
+import { SideBar, SideBarItem } from 'react-burger-sidenav'
+import 'react-burger-sidenav/dist/index.css'
 
 const App = () => {
   return (
