@@ -1,4 +1,4 @@
-# library
+# react-burger-sidenav
 
 > Made with create-react-library
 
@@ -7,21 +7,23 @@
 ## Install
 
 ```bash
-npm install --save library
+npm install --save react-burger-sidenav
 ```
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
+import React from 'react'
 
-import MyComponent from 'library'
-import 'library/dist/index.css'
+import { SideBar, SideBarItem } from 'react-burger-sidenav'
+import 'react-burger-sidenav/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const Example = () => {
+  return (
+    <SideBar>
+      <SideBarItem>hello world</SideBarItem>
+    </SideBar>
+  )
 }
 ```
 
