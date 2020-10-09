@@ -1,13 +1,13 @@
 # react-burger-sidenav
 
-> Made with create-react-library
+> A react sidebar
 
 [![NPM](https://img.shields.io/npm/v/library.svg)](https://www.npmjs.com/package/library) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Install
 
 ```bash
-npm install --save react-burger-sidenav
+npm install react-burger-sidenav
 ```
 
 ## Usage
@@ -26,6 +26,30 @@ const Example = () => {
   )
 }
 ```
+
+## SideNav Parameters
+
+|   params   | value  | default value |
+| :--------: | :----: | :-----------: |
+|    ham     | string |      ''       |
+| iconColor  | string |    #00000     |
+| closeColor | string |    #00000     |
+|  bgColor   | string |     white     |
+| className  | string |      ''       |
+
+&nbsp;
+
+## SideNavItem Parameters
+
+|  params   | value  | default value |
+| :-------: | :----: | :-----------: |
+| textSize  | string |     20px      |
+|    to     | string |       #       |
+|  bgHover  | string |    #f7fafc    |
+|  bgColor  | string |     white     |
+|  padding  | string |     1rem      |
+|  target   | string |      ''       |
+| className | string |      ''       |
 
 ## License
 

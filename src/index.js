@@ -8,7 +8,7 @@ import 'animate.css/animate.min.css'
 
 export const SideBarItem = ({
   children,
-  size = '20px',
+  textSize = '20px',
   to = '#',
   bgHover = '#f7fafc',
   bgColor = 'white',
@@ -30,7 +30,7 @@ export const SideBarItem = ({
         display: 'block',
         backgroundColor: `${hover ? bgHover : bgColor}`,
         padding: `${padding}`,
-        textSize: `${size},
+        textSize: `${textSize},
       }`
       }}
     >
@@ -41,10 +41,10 @@ export const SideBarItem = ({
 
 export const SideBar = ({
   children,
-  ham,
+  icon,
   iconColor = '#00000',
   closeColor = '#00000',
-  backgroundColor = 'white',
+  bgColor = 'white',
   className = ''
 }) => {
   var [isOpen, setIsOpen] = useState(false)
@@ -55,8 +55,8 @@ export const SideBar = ({
           setIsOpen(!isOpen)
         }}
       >
-        {ham ? (
-          <img src={ham} alt='ham' />
+        {icon ? (
+          <img src={icon} alt='icon' />
         ) : (
           <svg
             width='20'
@@ -93,7 +93,7 @@ export const SideBar = ({
         <div
           className={`${styles.ham} ${className} animate__animated animate__slideInLeft`}
           style={{
-            backgroundColor: `${backgroundColor}`
+            backgroundColor: `${bgColor}`
           }}
         >
           <div style={{ display: 'flex' }}>
