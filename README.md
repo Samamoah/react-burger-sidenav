@@ -27,17 +27,20 @@ const Example = () => {
 }
 ```
 
+## Demo Url
+
+[https://samamoah.github.io/react-burger-sidenav](https://samamoah.github.io/react-burger-sidenav)
+
 ## SideNav Parameters
 
-|   params   | value  | default value |
-| :--------: | :----: | :-----------: |
-|    ham     | string |      ''       |
-| iconColor  | string |    #00000     |
-| closeColor | string |    #00000     |
-|  bgColor   | string |     white     |
-| className  | string |      ''       |
-
-&nbsp;
+|   params   |  value  | default value |
+| :--------: | :-----: | :-----------: |
+|    ham     | string  |      ''       |
+| iconColor  | string  |    #000000    |
+| closeColor | string  |    #000000    |
+|  bgColor   | string  |     white     |
+| closeIcon  | boolean |     true      |
+| className  | string  |      ''       |
 
 ## SideNavItem Parameters
 
@@ -45,6 +48,7 @@ const Example = () => {
 | :-------: | :----: | :-----------: |
 | textSize  | string |     20px      |
 |    to     | string |       #       |
+| textColor | string |    #000000    |
 |  bgHover  | string |    #f7fafc    |
 |  bgColor  | string |     white     |
 |  padding  | string |     1rem      |

@@ -12,6 +12,7 @@ export const SideBarItem = ({
   to = '#',
   bgHover = '#f7fafc',
   bgColor = 'white',
+  textColor = '#000000',
   padding = '1rem',
   target = '',
   className = ''
@@ -20,13 +21,16 @@ export const SideBarItem = ({
   return (
     <a
       href={to}
-      onMouseOver={() => {
-        setHover(!hover)
+      onMouseEnter={() => {
+        setHover(true)
+      }}
+      onMouseLeave={() => {
+        setHover(false)
       }}
       className={className}
       target={target}
       style={{
-        color: 'black',
+        color: `${textColor}`,
         display: 'block',
         backgroundColor: `${hover ? bgHover : bgColor}`,
         padding: `${padding}`,
@@ -41,9 +45,10 @@ export const SideBarItem = ({
 
 export const SideBar = ({
   children,
-  icon,
-  iconColor = '#00000',
-  closeColor = '#00000',
+  icon = '',
+  close = true,
+  iconColor = '#000000',
+  closeColor = '#000000',
   bgColor = 'white',
   className = ''
 }) => {
@@ -96,28 +101,30 @@ export const SideBar = ({
             backgroundColor: `${bgColor}`
           }}
         >
-          <div style={{ display: 'flex' }}>
-            <svg
-              xmlns='http://www.w3.org/2000/svg'
-              width='24'
-              height='24'
-              viewBox='0 0 24 24'
-              style={{
-                width: '30px',
-                height: '30px',
-                marginRight: '0',
-                marginLeft: 'auto'
-              }}
-              onClick={() => {
-                setIsOpen(!isOpen)
-              }}
-            >
-              <title>ic_close_24px</title>
-              <g fill={closeColor}>
-                <path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z' />
-              </g>
-            </svg>
-          </div>
+          {close && (
+            <div style={{ display: 'flex' }}>
+              <svg
+                xmlns='http://www.w3.org/2000/svg'
+                width='24'
+                height='24'
+                viewBox='0 0 24 24'
+                style={{
+                  width: '30px',
+                  height: '30px',
+                  marginRight: '0',
+                  marginLeft: 'auto'
+                }}
+                onClick={() => {
+                  setIsOpen(!isOpen)
+                }}
+              >
+                <title>ic_close_24px</title>
+                <g fill={closeColor}>
+                  <path d='M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z' />
+                </g>
+              </svg>
+            </div>
+          )}
           {children}
         </div>
       )}

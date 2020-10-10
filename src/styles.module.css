@@ -14,7 +14,7 @@
 }
 
 .ham {
-  position: absolute;
+  position: fixed;
   width: 75%;
   height: 100%;
   top: 0;
@@ -24,7 +24,7 @@
 
 @media only screen and (min-width: 600px) {
   .ham {
-    position: absolute;
+    position: fixed;
     width: 20%;
     height: 100%;
     top: 0;
